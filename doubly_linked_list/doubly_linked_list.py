@@ -123,7 +123,7 @@ class DoublyLinkedList:
             self.length = self.length - 1
         elif self.head == node:
             self.head = node.next
-            sef.length = self.length - 1
+            self.length = self.length - 1
             node.delete()
         elif self.tail == node:
             self.tail = node.prev
