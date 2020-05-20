@@ -1,6 +1,6 @@
 from doubly_linked_list import DoublyLinkedList
 import sys
-sys.path.append('../doubly_linked_list/')
+sys.path.append('./doubly_linked_list')
 
 """
 A stack is a data structure whose primary purpose is to store and
