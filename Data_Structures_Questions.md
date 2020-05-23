@@ -2,9 +2,9 @@ Answer the following questions for each of the data structures you implemented a
 
 ## Stack
 
-1. What is the runtime complexity of `push`?
+1. What is the runtime complexity of `push`? for fixed size array, the time complexity is O(1) for 'push' as you only have to move the last pointer left or right
 
-2. What is the runtime complexity of `pop`?
+2. What is the runtime complexity of `pop`? for fixed size array, the time complexity is O(1) for 'push' as you only have to move the last pointer left or right
 
 3. What is the runtime complexity of `len`?
 
