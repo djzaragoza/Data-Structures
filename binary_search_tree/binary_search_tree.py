@@ -1,8 +1,8 @@
 from queue.py import queue
 from stack.py import stack
 import sys
-sys.path.append('../queue')
-sys.path.append('../stack')
+sys.path.append('./queue')
+sys.path.append('./stack')
 
 """
 Binary search trees are a data structure that enforce an ordering over 
@@ -43,6 +43,20 @@ class BSTNode:
     # Return True if the tree contains the value
     # False if it does not
     def contains(self, target):
+        if self.value == target:
+            return True
+        contained_in_subtree = False
+        if target < self.value:
+            if not self.left:
+                return False
+            else:
+                contained_in_subtree = self.left.contains(target)
+        else:
+            if not self.right:
+                return False
+            else:
+                contained_in_subtree = self.right.contains(target)
+        return contained_in_subtree
         pass
 
     # Return the maximum value found in the tree
