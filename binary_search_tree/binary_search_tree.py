@@ -1,3 +1,9 @@
+from queue.py import queue
+from stack.py import stack
+import sys
+sys.path.append('../queue')
+sys.path.append('../stack')
+
 """
 Binary search trees are a data structure that enforce an ordering over 
 the data they store. That ordering in turn makes it a lot more efficient 
