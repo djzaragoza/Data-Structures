@@ -1,8 +1,4 @@
-from queue.py import queue
-from stack.py import stack
-import sys
-sys.path.append('./queue')
-sys.path.append('./stack')
+
 
 """
 Binary search trees are a data structure that enforce an ordering over 
@@ -15,6 +11,8 @@ This part of the project comprises two days:
 2. Implement the `in_order_print`, `bft_print`, and `dft_print` methods
    on the BSTNode class.
 """
+
+
 class BSTNode:
     def __init__(self, value):
         self.value = value
