@@ -21,21 +21,19 @@ class BSTNode:
 
     # Insert the given value into the tree
     def insert(self, value):
-        if value is None:
-            return
-        
-        elif self.value is None:
-            self.value = BinarySearchTree(value)
-        elif value >= self.value:
-            if self.right is None:
-                self.right = BinarySearchTree(value)
-            else:
+        if value >= self.value:
+            if self.right is not None:
                 self.right.insert(value)
-        else:
-            if self.left is None:
-                self.left = BinarySearchTree(value)
+                
             else:
+                new_node = BSTNode(value)
+                self.right = new_node
+        else:
+            if self.left is not None:
                 self.left.insert(value)
+            else:
+                new_node = BSTNode(value)
+                self.left = new_node
         pass
 
     # Return True if the tree contains the value
@@ -76,11 +74,25 @@ class BSTNode:
     # in an iterative breadth first traversal
     def bft_print(self, node):
         pass
+    
+    # make a queue
+    # enqueue the node
+    # as long as the queue is not empty
+    ## dequeue from the front of the queue, this is our current node
+    ## enqueue the kids of the current node on the queue 
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
+        
         pass
+    
+    # make a stack
+    # push the node on the stack
+    # as long as the stack is not empty
+    ## pop off the stack, this is our current node
+    ## put the kids on the current node on the stack 
+    ## (check that they are not None, then put them on the stack)
 
     # Stretch Goals -------------------------
     # Note: Research may be required
