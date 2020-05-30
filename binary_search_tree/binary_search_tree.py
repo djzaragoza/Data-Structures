@@ -110,8 +110,7 @@ class BSTNode:
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
-        stack = []
-        
+        stack = [] 
         stack.append(node)
         while len(stack) != 0:
             node = stack.pop()
@@ -140,3 +139,12 @@ class BSTNode:
     # Print Post-order recursive DFT
     # def post_order_dft(self, node):
         # pass
+    t = BSTNode(1) #or what your tree class is named
+    t.insert(8)
+    t.insert(5)
+    t.insert(7)
+    t.insert(6)
+    t.insert(3)
+    t.insert(4)
+    t.insert(2)
+    t.bft_print(t)
